@@ -1,0 +1,93 @@
+.banner{
+    margin: 50px 0;
+    .wrapper{
+        height: 223px;
+        &::before{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0,0,0,0.3);
+            border-radius: $container-radius;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: $container-radius;
+        }
+        h1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 2;
+            transform: translate(-80%, -50%);
+            color: white;
+            font-size: 24px;
+            font-weight: 500;
+
+            @media screen and (min-width: $tablette) {
+                font-size: 48px;
+                width: max-content;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+}
+
+.housings_list{
+    list-style: none;
+    background: $gris;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 260px;
+    place-items: center;
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 100px;
+    border-radius: $container-radius;
+    .housing{
+        position: relative;
+        width: 100%;
+        height: 260px;
+        &::before{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background: linear-gradient(to top, rgba(0,0,0,.7), transparent);
+            border-radius: $item-radius;
+        }
+        img{
+            border-radius: $item-radius;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .housing_title{
+            position: absolute;
+            z-index: 2;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            max-width: 70%;
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+
+    @media screen and (min-width: $phone) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (min-width: $tablette) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

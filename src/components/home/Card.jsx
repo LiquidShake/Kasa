@@ -3,14 +3,8 @@ import React from 'react';
 const Card = ({ id, title, cover }) => {
     return(
         <li key={id} className='housing'>
-            <a href={'/housing/' + id}>
-                <figure className='housing_figure'>
-                    <img src={cover} alt={title}  className='housing_figure_cover'/>
-                    <figcaption className='housing_figure_figcaption'>
-                        <h2 className='housing_figure_figcaption_title'>{title}</h2>
-                    </figcaption>
-                </figure>
-            </a>
+            <img src={cover} alt={title}  className='housing_figure_cover'/>
+            <h2 className='housing_title'><a href={'/housing/' + id}>{title}</a></h2>
         </li>
     )
 }
