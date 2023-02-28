@@ -1,5 +1,8 @@
 .banner{
-    margin: 50px 0;
+    margin-top: 50px;
+    @media screen and (min-width: $tablette) {
+        margin: 50px 0;
+    }
     .wrapper{
         height: 223px;
         &::before{
@@ -48,7 +51,6 @@
     place-items: center;
     gap: 30px;
     width: 100%;
-    margin-bottom: 100px;
     border-radius: $container-radius;
     .housing{
         position: relative;

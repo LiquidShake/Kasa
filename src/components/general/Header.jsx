@@ -1,4 +1,5 @@
-import logo from '../../images/logo_kasa.svg';
+import React from 'react';
+import logo from "../../images/logo_kasa.svg"
 
 function Header() {
     return (

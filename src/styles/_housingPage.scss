@@ -1,0 +1,79 @@
+.housingPage{
+    color: $primary-color;
+    .general{
+        
+        .housingInfos{
+            h1{
+                font-size: 25px;
+                font-weight: 500;
+                &+p{
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                }
+            }
+            .tags{
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                list-style: none;
+                li{
+                    color: white;
+                    font-size: 14px;
+                    background: $primary-color;
+                    padding: 3px 40px;
+                    border-radius: $item-radius;
+                }
+            }
+        }
+        .otherInfos{
+            display: flex;
+            justify-content: space-between;
+            .host{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 24px;
+                order: 2;
+                p{
+                    font-size: 18px;
+                    font-weight: 500;
+                    text-align: right;
+                    max-width: 90px;
+                }
+                img{
+                    border-radius: 50%;
+                    max-width: 64px;
+                }
+            }
+            .rating{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+
+    @media screen and (min-width: $tablette) {
+        .general{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .housingInfos{
+                h1{
+                    font-size: 36px;
+                    &+p{
+                        font-size: 18px;
+                    }
+                }
+                .tags li{
+                    font-size: 14px;
+                }
+            }
+        }
+        .collapses{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 75px
+        }
+    }
+}

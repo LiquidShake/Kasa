@@ -1,0 +1,53 @@
+.carousel{
+    height: 415px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 30px auto;
+    .carousel_container{
+        display: flex;
+        height: 100%;
+        transition: .3s all ease;
+        img{
+            flex-shrink: 0;
+            width: 100%;
+            object-fit: cover;
+            border-radius: $container-radius;
+        }
+    }
+    .carousel_arrows{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        i{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 50px;
+            color: white;
+            cursor: pointer;
+            &.arrow_prev{
+                left: 23px;
+            }
+            &.arrow_next{
+                right: 23px;
+            }
+        }
+    }
+    .nb_slides{
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        font-size: 18px;
+        color: white;
+        margin-top: -40px;
+    }
+
+    @media screen and (min-width: $tablette) {
+        .carousel_arrows i{
+            font-size: 100px;
+        }
+    }
+}
