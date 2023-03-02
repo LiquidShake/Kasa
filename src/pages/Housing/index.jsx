@@ -1,10 +1,10 @@
 import { useParams } from 'react-router-dom'
-import NotFound from './NotFound'
-import housings from "../data/logements.json"
-import Collapse from '../components/Collapse'
-import Carousel from '../components/Carousel'
-import redStar from '../images/red_star.svg'
-import greyStar from '../images/grey_star.svg'
+import NotFound from '../NotFound'
+import housings from "../../data/logements.json"
+import Collapse from '../../components/Collapse'
+import Carousel from '../../components/Carousel'
+import redStar from '../../images/red_star.svg'
+import greyStar from '../../images/grey_star.svg'
 
 export default function Housing() {
 

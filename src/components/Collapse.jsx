@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
 
-const Collapse = (props) => {
+const Collapse = ({title, content}) => {
     const [ openTab, setOpenTab ] = useState(false);
 
     const openCollapse = () => {
@@ -14,11 +14,11 @@ const Collapse = (props) => {
         <>
             <div className="collapse">
                 <div onClick={openCollapse} className="collapse_header">
-                    <h2>{props.title}</h2>
+                    <h2>{title}</h2>
                     {!openTab ? <i>{<FontAwesomeIcon icon={faAngleDown} />}</i> : <i>{<FontAwesomeIcon icon={faAngleUp} />}</i>}
                 </div>
                 {openTab && 
-                    <div className="collapse_content">{props.content}</div>
+                    <div className="collapse_content">{content}</div>
                 }
             </div>
         </>

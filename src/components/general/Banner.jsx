@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function Banner(props) {
+export default function Banner({cover, title}) {
   return (
     <section className="banner">
       <div className="wrapper">
-        <img src={props.cover} alt="Bannière" />
-        <h1>{props.title}</h1>
+        <img src={cover} alt="Bannière" />
+        <h1>{title}</h1>
       </div>
     </section>
   )
