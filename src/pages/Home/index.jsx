@@ -1,6 +1,6 @@
-import Banner from "../components/general/Banner"
-import bannerCover from '../images/montagnes-ocean.png'
-import DisplayCards from "../components/home/DisplayCards"
+import Banner from "../../components/Banner"
+import bannerCover from '../../images/montagnes-ocean.png'
+import DisplayCards from "./DisplayCards"
 
 export default function Home() {
     document.title = 'Kasa - Accueil'

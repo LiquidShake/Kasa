@@ -1,4 +1,4 @@
-import Banner from "../components/general/Banner"
+import Banner from "../components/Banner"
 import bannerCover from '../images/montagnes-vallee.png'
 import Collapse from '../components/Collapse'
 
